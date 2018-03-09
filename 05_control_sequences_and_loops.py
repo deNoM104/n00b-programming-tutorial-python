@@ -33,4 +33,11 @@ elif puntos < 24:
 else:
     print('jajajajajajaja');
 #
-# 
+# Veremos ahora los ciclos. Un ciclo es un conjunto de sentencias que se repiten mientras se dé una condición propuesta. Se utiliza el comando WHILE
+while puntos > 0:
+    print(puntos, 'acercándonos al puntero');
+    puntos = puntos - 1;
+print('A', puntos, 'del puntero');
+#
+# El ciclo WHILE se utiliza para ciclar en condiciones complejas
+# Para ciclos en rangos (1..n), se utiliza el ciclo FOR
