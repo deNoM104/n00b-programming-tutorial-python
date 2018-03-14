@@ -41,3 +41,27 @@ print('A', puntos, 'del puntero');
 #
 # El ciclo WHILE se utiliza para ciclar en condiciones complejas
 # Para ciclos en rangos (1..n), se utiliza el ciclo FOR
+for x in range(1, 10):
+    print('x =', x);
+# Nótese que usamos la función RANGE para definir entre qué valores itera el ciclo. el rango x,y definido por la función se toma como [x,y)
+# La sentencia FOR puede utilizarse para recorrer los elementos de una lista o arreglo
+deLaB = [ 'San Lorenzo', 'Huracán', 'Racing', 'Independiente', 'Vélez', 'River'];
+print('Los siguientes equipos han descendido');
+for equipo in deLaB:
+    print(equipo);
+# Al igual que con los WHILEs, dentro de un mismo FOR se pueden realizar varias operaciones
+suma = 0;
+for i in range(1, 3):
+    print('i =', i);
+    suma = suma + i;
+    print('suma:', suma);
+print('suma:', suma);
+#
+# EJERCICIOS
+# Para estos ejercicios utilizaremos la función INPUT para ingresar números desde el teclado
+# SINTAXIS: int(input(texto));
+# 1. Realizar un condicional que vaya a una u otra condición según el NÚMERO que ingrese el usuario
+# 2. Realizar un condicional que muestre un texto si el NÚMERO ingresado es mayor a 10
+# 3. Realizar un condicional que analice cinco opciones distintas a partir del NÚMERO ingresado
+# 4. Realizar un ciclo que sume los primeros N números enteros, donde N es el NÚMERO ingresado
+# 5. Realizar un ciclo que indique si el NÚMERO ingresado es PRIMO
