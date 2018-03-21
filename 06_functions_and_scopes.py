@@ -74,4 +74,27 @@ def sumaFactorizada(arreglo):
 sumaFactorizada(muchos);
 #
 # Veremos ahora el _scope_ de las variables
-# Las variables definidas "en el aire" (fuera de funciones, ifs, ciclos, etc) se llaman variables GLOBALES
+# Las variables definidas "en el aire" (fuera de funciones, bloques de control, ciclos, etc) se llaman variables GLOBALES.
+# Las variables globales pueden ser accedidas en cualquier punto del programa.
+# Por el contrario, existen variables LOCALES que sólo pueden ser vistas dentro del contexto en que se las creó.
+# Curiosamente, en PYTHON necesitamos avisar que una variable es global dentro de un scope
+varGlobal = 0;
+def factorial(n):
+    global varGlobal;
+    varLocal = 1;
+    for factorizante in range(1, n + 1):
+        varLocal = varLocal * factorizante;
+        varGlobal = varGlobal + factorizante;
+
+    return varLocal;
+fact = factorial(6);
+print('Factorial:', fact)
+print('varGlobal:', varGlobal);
+print('varLocal:', varLocal);
+# 
+# Antes de los ejercicios, comentá la línea 93 (print('varLocal:', varLocal);) para que puedas ejecutar sin fallos
+# Ejercicios
+# 1. Definir una función que tome dos números enteros, los sume y devuelva el resultado
+# 2. Definir una función que tome dos números enteros y un texto, sume el resultado de la suma natural de los enteros (entre ellos), 
+#    muestre en pantalla el texto y devuelva el resultado de la suma
+# 3. Definir una función que determine si un número ingresado como parámetro es primo
